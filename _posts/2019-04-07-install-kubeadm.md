@@ -31,14 +31,14 @@ This post shows the Installation of kubeadm, kubelet and kubectl.
 # sudo apt-mark hold kubelet kubeadm
 ```
 
-The `kubelet` is the node agent that will run all the pods for us, including the kube-system pods.  
-The `kubeadm` is a tool for deploying multi-node kubernetes clusters.  
-The `kubectl` is the command line tool for interacting with Kubernetes.  
+The **`kubelet`** is the node agent that will run all the pods for us, including the kube-system pods.  
+The **`kubeadm`** is a tool for deploying multi-node kubernetes clusters.  
+The **`kubectl`** is the command line tool for interacting with Kubernetes.  
 
 We’ve installed specific versions and `marked` them to hold so that Kubernetes and Docker don’t automatically update and become incompatible.  
 
 
 ## Overview of kubeadm
-`kubeadm` is the command line tool for easily provisioning a secure Kubernetes cluster on top of physical or cloud servers or virtual machines (currently in alpha).  
+**`kubeadm`** is the command line tool for easily provisioning a secure Kubernetes cluster on top of physical or cloud servers or virtual machines (currently in alpha).  
 
-[https://kubernetes.io/docs/setup/cri/#dockerhttps://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/#what-s-next](https://kubernetes.io/docs/setup/cri/#dockerhttps://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/#what-s-next)
+[https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/#what-s-next](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/#what-s-next)
