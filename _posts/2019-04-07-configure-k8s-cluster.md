@@ -11,24 +11,22 @@ This post shows the creation of a single master cluster with kubeadm.
 
 ## Creating a single master cluster with kubeadm
 
-<span style="font-size:20px">`kubeadm`</span> helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
+**`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 
 ### Installing kubeadm on your hosts
-https://github.com/unipark00/k8s/blob/master/cluster/01__install_kubeadm.md 참고
+[https://github.com/unipark00/k8s/blob/master/cluster/01__install_kubeadm.md](https://github.com/unipark00/k8s/blob/master/cluster/01__install_kubeadm.md)
 
 ### Initializing the Master node
 * Kubernetes 설치 후, **Master Node** 초기화
 * Master 노드를 초기화 할 때, 사용할 <span style="color:red">**Pod Network**</span>에 따라 초기화 코드가 달라짐
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
-  https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork
+  [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork)
 
 The **`master`** is the machine where the control plane components run, including etcd (the cluster database) and the API server (which the kubectl CLI communicates with).  
 
-1. Choose a pod network add-on, and verify whether it requires any arguments to be passed to kubeadm initialization.  
-   Depending on which third-party provider you choose, you might need to set the **`--pod-network-cidr`** to a provider-specific value.
-   See [Installing a pod network add-on](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network).  
+1. Choose a pod network add-on, and verify whether it requires any arguments to be passed to kubeadm initialization. Depending on which third-party provider you choose, you might need to set the **`--pod-network-cidr`** to a provider-specific value. See [Installing a pod network add-on](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network).  
 1. Installing runtime (preparation)  
-   ```
+   ```console
    $ kubeadm init --pod-network-cidr=10.244.0.0/16
    ```
 1. Unless otherwise specified, kubeadm uses the network interface associated with the default gateway to advertise the master’s IP. To use a different network interface, specify the **`--apiserver-advertise-address=<ip-address>`** argument to kubeadm init.  
@@ -44,16 +42,15 @@ The **`master`** is the machine where the control plane components run, includin
   you should think of a suitable CIDR replacement and use that during **`kubeadm init`** with **`--pod-network-cidr`**  
   and as a replacement in your network plugin’s YAML.
 - You can install a pod network add-on with the following command:  
-  ```
+  ```console
   $ kubectl apply -f <add-on.yaml>
   ```
   
-  (예) Flannel  
+  (e.g) Flannel  
   1) Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**
-  2)  Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**
-  3)  Apply a pod network add-on (Flannel)
-  ---
-  ```
+  2) Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**
+  3) Apply a pod network add-on (Flannel)
+  ```console
   $ sysctl net.bridge.bridge-nf-call-iptables=1
   $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
   $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/ \
@@ -67,8 +64,9 @@ The **`master`** is the machine where the control plane components run, includin
 
 ### Troubleshooting
 * Swap disabled
-```
-$ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+```console
+$ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
+    /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
