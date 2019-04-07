@@ -1,8 +1,8 @@
 ---
-title: "Install Docker (Preparation)"
+title: "Install Docker as Preparation for k8s"
 search: false
-categories: 
-  - k8s(Kubernetes)
+categories:
+  - k8s
 last_modified_at: 2019-04-07 20:49:51
 ---
 
