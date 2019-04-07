@@ -49,7 +49,7 @@ The **`master`** is the machine where the control plane components run, includin
   $ sysctl net.bridge.bridge-nf-call-iptables=1
   $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
   ```
-  To make kubectl work for your non-root user, run these commands, which are also part of the kubeadm init output:
+  To make **`kubectl`** work for your non-root user, run these commands, which are also part of the **`kubeadm init`** output:
   ```console
   $ mkdir -p $HOME/.kube
   $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
