@@ -43,8 +43,8 @@ The **`master`** is the machine where the control plane components run, includin
   
   (e.g) Flannel  
   1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
-  2. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
-  3. Apply a pod network add-on (Flannel)  
+  1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
+  1. Apply a pod network add-on (Flannel)  
   ```console
   $ sysctl net.bridge.bridge-nf-call-iptables=1
   $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
@@ -67,6 +67,11 @@ The **`master`** is the machine where the control plane components run, includin
   daemonset.extensions/kube-flannel-ds-arm created
   daemonset.extensions/kube-flannel-ds-ppc64le created
   daemonset.extensions/kube-flannel-ds-s390x created
+  ```
+  1. Check that the CoreDNS pod is Running
+  ```console
+  $ kubectl get nodes
+  $ kubectl get pods --all-namespaces
   ```
 
 ## Miscellaneous
