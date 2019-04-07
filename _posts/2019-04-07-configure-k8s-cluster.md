@@ -57,8 +57,7 @@ The **`master`** is the machine where the control plane components run, includin
   ```
   ```console
   $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/ \
-       a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml
-
+       a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml  
   clusterrole.rbac.authorization.k8s.io/flannel created
   clusterrolebinding.rbac.authorization.k8s.io/flannel created
   serviceaccount/flannel created
@@ -71,7 +70,6 @@ The **`master`** is the machine where the control plane components run, includin
   ```
 
 ## Miscellaneous
-
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 * [Add-ons](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
 
