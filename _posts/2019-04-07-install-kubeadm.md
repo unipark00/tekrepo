@@ -3,7 +3,7 @@ title: "Installing kubeadm, kubelet and kubectl"
 search: false
 categories:
   - Kubernetes
-last_modified_at: 2019-04-07T20:39:00+09:00
+last_modified_at: 2019-04-07T21::00+09:00
 toc: true
 ---
 

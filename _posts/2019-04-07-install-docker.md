@@ -3,7 +3,7 @@ title: "Install docker as preparation for k8s cluster setup"
 search: false
 categories:
   - Kubernetes
-last_modified_at: 2019-04-07T20:49:51+09:00
+last_modified_at: 2019-04-07T20:30+09:00
 toc: true
 ---
 
