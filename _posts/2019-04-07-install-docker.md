@@ -20,4 +20,4 @@ Since v1.14.0, kubeadm will try to automatically detect the container runtime on
 # sudo apt-get update && sudo apt-cache search docker-ce
 # sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
-https://kubernetes.io/docs/setup/cri/#docker
+[https://kubernetes.io/docs/setup/cri/#docker](https://kubernetes.io/docs/setup/cri/#docker)
