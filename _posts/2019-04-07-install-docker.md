@@ -2,12 +2,12 @@
 title: "Install Docker as Preparation for k8s"
 search: false
 categories:
-  - Kubernetes
+  - k8s-cluster
 last_modified_at: 2019-04-07T20:49:51+09:00
 toc: true
 ---
 
-This post shows the Installation of docker as preparation for k8s(Kubernetes) setup.
+This post shows the Installation of docker as preparation for k8s(Kubernetes) cluster setup.
 
 ## CRI installation
 Since v1.6.0, Kubernetes has enabled the use of `CRI`, Container Runtime Interface, by default.
