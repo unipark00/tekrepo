@@ -51,6 +51,9 @@ The **`master`** is the machine where the control plane components run, includin
   ```
   To make kubectl work for your non-root user, run these commands, which are also part of the kubeadm init output:
   ```console
+  $ mkdir -p $HOME/.kube
+  $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
   ```
   ```console
   $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/ \
