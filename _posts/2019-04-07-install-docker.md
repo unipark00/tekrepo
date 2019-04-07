@@ -10,7 +10,7 @@ toc: true
 This post shows the Installation of docker as preparation for k8s(Kubernetes) setup.
 
 ## CRI installation
-Since v1.6.0, Kubernetes has enabled the use of **`CRI`**, Container Runtime Interface, by default.
+Since v1.6.0, Kubernetes has enabled the use of `CRI`, Container Runtime Interface, by default.
 
 Since v1.14.0, kubeadm will try to automatically detect the container runtime on Linux nodes by scanning through a list of well known domain sockets.
 
