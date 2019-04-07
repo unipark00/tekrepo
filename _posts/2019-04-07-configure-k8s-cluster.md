@@ -14,7 +14,7 @@ This post shows the creation of a single master cluster with kubeadm.
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 
 ### Installing kubeadm on your hosts
-[https://github.com/unipark00/k8s/blob/master/cluster/01__install_kubeadm.md](https://github.com/unipark00/k8s/blob/master/cluster/01__install_kubeadm.md)
+[https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
 
 ### Initializing the Master node
 * Kubernetes 설치 후, **Master Node** 초기화
