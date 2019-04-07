@@ -14,7 +14,7 @@ Since v1.6.0, Kubernetes has enabled the use of **`CRI`**, Container Runtime Int
 
 Since v1.14.0, kubeadm will try to automatically detect the container runtime on Linux nodes by scanning through a list of well known domain sockets.
 
-### Install docker (All Nodes)
+## Install docker (All Nodes)
 ```console
 # sudo apt-get update
 # sudo apt-get install apt-transport-https ca-certificates \

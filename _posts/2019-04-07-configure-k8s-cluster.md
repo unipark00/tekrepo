@@ -9,14 +9,12 @@ toc: true
 
 This post shows the creation of a single master cluster with kubeadm.
 
-## Creating a single master cluster with kubeadm
-
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 
-### Installing kubeadm on your hosts
+## Installing kubeadm on your hosts
 [https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
 
-### Initializing the Master node
+## Initializing the Master node
 * Kubernetes 설치 후, **Master Node** 초기화
 * Master 노드를 초기화 할 때, 사용할 <span style="color:red">**Pod Network**</span>에 따라 초기화 코드가 달라짐
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
@@ -32,7 +30,7 @@ The **`master`** is the machine where the control plane components run, includin
 1. Unless otherwise specified, kubeadm uses the network interface associated with the default gateway to advertise the master’s IP. To use a different network interface, specify the **`--apiserver-advertise-address=<ip-address>`** argument to kubeadm init.  
 1. Run **`kubeadm config images pull`** prior to **`kubeadm init`** to verify connectivity to gcr.io registries.
 
-### Installing a pod network add-on
+## Installing a pod network add-on
 
 - You must install a pod network add-on so that your pods can communicate with each other.
 - The network must be deployed before any applications.
@@ -57,12 +55,12 @@ The **`master`** is the machine where the control plane components run, includin
        a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml
   ```
 
-### Miscellaneous
+## Miscellaneous
 
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 * [Add-ons](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
 
-### Troubleshooting
+## Troubleshooting
 * Swap disabled
 ```console
 $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
