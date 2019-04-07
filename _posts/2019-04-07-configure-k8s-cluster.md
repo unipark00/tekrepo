@@ -15,8 +15,8 @@ This post shows the creation of a single master cluster with kubeadm.
 [https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
 
 ## Initializing the Master node
-* Kubernetes 설치 후, **`Master Node`** 초기화
-* Master 노드를 초기화 할 때, 사용할 **`Pod Network`**에 따라 초기화 코드가 달라짐
+* Kubernetes 설치 후, `Master Node` 초기화
+* Master 노드를 초기화 할 때, 사용할 `Pod Network`에 따라 초기화 코드가 달라짐
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
   [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork)
 
