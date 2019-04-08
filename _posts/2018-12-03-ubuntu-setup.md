@@ -40,7 +40,6 @@ VirtualBox - File - Preference - Network - NatNetwork (10.0.0.0/24)
 ```
 
 2. Ubuntu Server (k8s worker) 설정  
-```console
 root@ubuntu:/etc/network$ vi interfaces
 
 auto lo
@@ -52,7 +51,6 @@ address 10.0.0.X
 netmask 255.255.255.0
 network 10.0.0.1
 broadcast 10.0.0.255
-```
 
 3. Ubuntu Desktop 설정 
 interface 파일 대신 Network Manager로 수정  
