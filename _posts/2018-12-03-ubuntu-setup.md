@@ -37,7 +37,7 @@ Port 22
 1. NatNetwork 만들기  
    * VirtualBox - File - Preference - Network - NatNetwork (10.0.0.0/24)
 
-2. Ubuntu Server (k8s worker) 설정
+2. Ubuntu Server (k8s worker) 설정  
 ```console
 root@ubuntu:/etc/network$ vi interfaces
 
@@ -53,7 +53,7 @@ broadcast 10.0.0.255
 ```
 
 3. Ubuntu Desktop 설정  
-   interface 파일 대신 Network Manager로 수정  
-   * Settings -> Network -> Ehternet (enp0s3) -> Wired -> IPv4
-     * IPv4 Method를 Manual로 변경 후, 해당 정보 입력
-     * DNS는 AUTO
+interface 파일 대신 Network Manager로 수정  
+  * Settings -> Network -> Ehternet (enp0s3) -> IPv4
+    * IPv4 Method를 Manual로 변경 후, 해당 정보 입력
+    * DNS는 AUTO
