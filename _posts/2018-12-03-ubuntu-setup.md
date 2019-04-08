@@ -19,11 +19,11 @@ This post shows the miscellaneous Ubuntu setup on VirtualBox.
 // check if port 22 is activated
 # netstat -ntl
 Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address       Foreign Address       State
-tcp        0      0 127.0.1.1:53        0.0.0.0:*             LISTEN
-tcp        0      0 0.0.0.0:22          0.0.0.0:*             LISTEN
-tcp6       0      0 :::22               :::*                  LISTEN
-tcp6       0      0 :::80               :::*                  LISTEN
+Proto Recv-Q Send-Q Local Address     Foreign Address     State
+tcp        0      0 127.0.1.1:53      0.0.0.0:*           LISTEN
+tcp        0      0 0.0.0.0:22        0.0.0.0:*           LISTEN
+tcp6       0      0 :::22             :::*                LISTEN
+tcp6       0      0 :::80             :::*                LISTEN
 
 # /etc/init.d/ssh restart
 
