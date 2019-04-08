@@ -33,13 +33,30 @@ Port 22
 ```
 
 ## 2) Kubernetes Cluster를 위한 NAT Network 설정하기
-* VirtualBox - File - Preference - Network - NatNetwork (10.0.0.0/24)
-  * Master Node  : 10.0.0.10 / 255.255.255.0 / 10.0.0.1 / 10.0.0.255
-  * Worker Node1 : 10.0.0.11 / 255.255.255.0 / 10.0.0.1 / 10.0.0.255
-  * Worker Node2 : 10.0.0.12 / 255.255.255.0 / 10.0.0.1 / 10.0.0.255
 
-주의) Desktop에서는 interface 파일 설정이 잘 안된다
---> Network Manager를 통해서 수정
+1) NatNetwork 만들기
+* VirtualBox - File - Preference - Network - NatNetwork (10.0.0.0/24)
+
+2) Ubuntu Server (k8s worker) 설정
+```console
+root@ubuntu:/etc/network$ vi interfaces
+
+# 다음과 같이 설정하면 된다.
+auto enp0s3
+iface enp0s3 inet dhcp
+
+auto enp0s3
+iface enp0s3 inet static
+address 10.0.0.X
+netmask 255.255.255.0
+network 10.0.0.1
+broadcast 10.0.0.255
+```
+
+3) Ubuntu Desktop 설정
+interface 파일로 설정 대신 Network Manager로 수정
 
 * Settings -> Network -> Ehternet (enp0s3) -> Wired -> IPv4
-  * IPv4 Method를 Manual로 변경 후, 위의 정보를 입력한다.
+  * IPv4 Method를 Manual로 변경 후, 해당 정보 입력
+  * DNS는 AUTO
+  
