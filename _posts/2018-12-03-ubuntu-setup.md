@@ -35,12 +35,10 @@ Port 22
 ## 2) k8s cluster를 위한 NAT Network 설정
 
 A. NatNetwork 만들기  
-```console
 VirtualBox - File - Preference - Network - NatNetwork (10.0.0.0/24)
-```
 
 B. Ubuntu Server (k8s worker) 설정  
-```
+```console
 root@ubuntu:/etc/network$ vi interfaces
 
 auto lo
