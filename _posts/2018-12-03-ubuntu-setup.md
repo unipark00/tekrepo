@@ -57,3 +57,4 @@ interface 파일 대신 Network Manager로 수정
   * Settings -> Network -> Ehternet (enp0s3) -> IPv4
     * IPv4 Method를 Manual로 변경 후, 해당 정보 입력
     * DNS는 AUTO
+
