@@ -41,9 +41,8 @@ Port 22
 ```console
 root@ubuntu:/etc/network$ vi interfaces
 
-# 다음과 같이 설정하면 된다.
-auto enp0s3
-iface enp0s3 inet dhcp
+auto lo
+iface lo inet loopback
 
 auto enp0s3
 iface enp0s3 inet static
