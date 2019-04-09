@@ -11,21 +11,20 @@ This post shows the creation of a single master cluster with kubeadm.
 
 [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)  
 
-# Overview
-The **`master`** is the machine where the control plane components run, including etcd (the cluster database) and the API server (which the kubectl CLI communicates with).  
-
+## Overview
 * Kubernetes 설치 후, **`Master Node`** 초기화
 * Master 노드를 초기화 할 때, 사용할 **`Pod Network`**에 따라 초기화 코드가 달라짐
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
   [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork)
 
-# Instructions
+## Instructions
 
 ### Installing kubeadm on your hosts
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 [https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
 
-### Step
+### Initializing your master
+The **`master`** is the machine where the control plane components run, including etcd (the cluster database) and the API server (which the kubectl CLI communicates with).  
 1. Choose a pod network add-on, and verify whether it requires any arguments to be passed to kubeadm initialization. Depending on which third-party provider you choose, you might need to set the **`--pod-network-cidr`** to a provider-specific value. See [Installing a pod network add-on](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network).  
 1. (Optional) To use different container runtime or if there are more than one installed on the provisioned node, specify the **`--cri-socket`** argument to **```kubeadm init```**.
 1. (Optional) Unless otherwise specified, kubeadm uses the network interface associated with the default gateway to advertise the master’s IP. To use a different network interface, specify the **`--apiserver-advertise-address=<ip-address>`** argument to **`kubeadm init`**.  
