@@ -51,48 +51,34 @@ You can install a pod network add-on with the following command:
 kubectl apply -f <add-on.yaml>
 ```
 
-1. Flannel  
-  1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
-  1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
-  1. Apply a pod network add-on (Flannel)  
-  ```console
-  $ sysctl net.bridge.bridge-nf-call-iptables=1
-  $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
-  ```
-  To make **`kubectl`** work for your non-root user, run these commands, which are also part of the **`kubeadm init`** output:  
-  ```console
-  $ mkdir -p $HOME/.kube
-  $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
-  ```
-  ```console
-  $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-  clusterrole.rbac.authorization.k8s.io/flannel created
-  clusterrolebinding.rbac.authorization.k8s.io/flannel created
-  serviceaccount/flannel created
-  configmap/kube-flannel-cfg created
-  daemonset.extensions/kube-flannel-ds-amd64 created
-  daemonset.extensions/kube-flannel-ds-arm64 created
-  daemonset.extensions/kube-flannel-ds-arm created
-  daemonset.extensions/kube-flannel-ds-ppc64le created
-  daemonset.extensions/kube-flannel-ds-s390x created
+* Flannel  
+1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
+1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
+```console
+$ sysctl net.bridge.bridge-nf-call-iptables=1
+$ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+```
 
-  podsecuritypolicy.extensions/psp.flannel.unprivileged created
-  clusterrole.rbac.authorization.k8s.io/flannel created
-  clusterrolebinding.rbac.authorization.k8s.io/flannel created
-  serviceaccount/flannel created
-  configmap/kube-flannel-cfg created
-  daemonset.extensions/kube-flannel-ds-amd64 created
-  daemonset.extensions/kube-flannel-ds-arm64 created
-  daemonset.extensions/kube-flannel-ds-arm created
-  daemonset.extensions/kube-flannel-ds-ppc64le created
-  daemonset.extensions/kube-flannel-ds-s390x create
-  ```
-  1. Check that the CoreDNS pod is Running
-  ```console
-  $ kubectl get nodes
-  $ kubectl get pods --all-namespaces
-  ```
+1. Apply a pod network add-on (Flannel)  
+```console
+$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+podsecuritypolicy.extensions/psp.flannel.unprivileged created
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.extensions/kube-flannel-ds-amd64 created
+daemonset.extensions/kube-flannel-ds-arm64 created
+daemonset.extensions/kube-flannel-ds-arm created
+daemonset.extensions/kube-flannel-ds-ppc64le created
+daemonset.extensions/kube-flannel-ds-s390x create
+```
+
+1. Check that the CoreDNS pod is Running
+```console
+$ kubectl get nodes
+$ kubectl get pods --all-namespaces
+```
 
 ## Miscellaneous
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
