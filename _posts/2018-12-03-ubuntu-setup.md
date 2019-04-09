@@ -4,7 +4,7 @@ search: false
 categories:
   - Ubuntu
 last_modified_at: 2019-04-08T10:00+09:00
-toc: true
+toc: false
 ---
 
 This post shows the miscellaneous Ubuntu setup on VirtualBox.
