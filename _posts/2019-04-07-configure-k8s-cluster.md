@@ -47,7 +47,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
   and as a replacement in your network plugin’s YAML.
 - You can install a pod network add-on with the following command:  
 ```console
-$ kubectl apply -f <add-on.yaml>
+kubectl apply -f <add-on.yaml>
 ```
   
   (e.g) Flannel  
