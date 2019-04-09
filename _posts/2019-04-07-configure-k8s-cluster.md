@@ -11,7 +11,7 @@ This post shows the creation of a single master cluster with kubeadm.
 
 [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)  
 
-## Overview
+# Overview
 The **`master`** is the machine where the control plane components run, including etcd (the cluster database) and the API server (which the kubectl CLI communicates with).  
 
 * Kubernetes 설치 후, **`Master Node`** 초기화
@@ -19,7 +19,7 @@ The **`master`** is the machine where the control plane components run, includin
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
   [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork)
 
-## Instructions
+# Instructions
 
 ### Installing kubeadm on your hosts
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
