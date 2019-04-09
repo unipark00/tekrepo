@@ -53,13 +53,12 @@ kubectl apply -f <add-on.yaml>
 
 * Flannel  
 1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
-2. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
+1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 ```console
 $ sysctl net.bridge.bridge-nf-call-iptables=1
 $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
-
-3. Apply a pod network add-on (Flannel)  
+1. Apply a pod network add-on (Flannel)  
 ```console
 $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 podsecuritypolicy.extensions/psp.flannel.unprivileged created
@@ -73,8 +72,7 @@ daemonset.extensions/kube-flannel-ds-arm created
 daemonset.extensions/kube-flannel-ds-ppc64le created
 daemonset.extensions/kube-flannel-ds-s390x create
 ```
-
-4. Check that the CoreDNS pod is Running
+1. Check that the CoreDNS pod is Running
 ```console
 $ kubectl get nodes
 $ kubectl get pods --all-namespaces
