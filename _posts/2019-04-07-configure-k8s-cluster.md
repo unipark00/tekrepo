@@ -37,8 +37,7 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-## Installing a pod network add-on
-
+### Installing a pod network add-on
 - You must install a pod network add-on so that your pods can communicate with each other.
 - The network must be deployed before any applications.
 - CoreDNS will not start up before a network is installed.
@@ -47,9 +46,9 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
   you should think of a suitable CIDR replacement and use that during **`kubeadm init`** with **`--pod-network-cidr`**  
   and as a replacement in your network plugin’s YAML.
 - You can install a pod network add-on with the following command:  
-  ```console
-  $ kubectl apply -f <add-on.yaml>
-  ```
+```console
+$ kubectl apply -f <add-on.yaml>
+```
   
   (e.g) Flannel  
   1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
