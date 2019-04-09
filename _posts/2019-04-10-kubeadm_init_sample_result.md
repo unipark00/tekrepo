@@ -80,12 +80,17 @@ kubeadm join 10.0.0.10:6443 --token cmroik.cuarzd8oqr80ll1k \
     --discovery-token-ca-cert-hash sha256:0206ab21baffba732884504fc53d800898f04e0e701311b8426afd2023f11203
 ```
 
-## various monitoring commands
+## check node status
 ```console
 ejungpa@k8s-master:~$ kubectl get nodes
 NAME         STATUS     ROLES    AGE     VERSION
 k8s-master   NotReady   master   6m29s   v1.14.1
+```
+Note) Pod Network 이 설치안된 상태라서 node와 pod가 준비되지 않음  
+master node: NotReady, coredns pod: Pending  
 
+## check pod status
+```
 ejungpa@k8s-master:~$ kubectl get pods --all-namespaces
 NAMESPACE     NAME                                 READY   STATUS    RESTARTS   AGE
 kube-system   coredns-fb8b8dccf-67zqs              0/1     Pending   0          6m16s
@@ -95,7 +100,9 @@ kube-system   kube-apiserver-k8s-master            1/1     Running   0          
 kube-system   kube-controller-manager-k8s-master   1/1     Running   0          5m31s
 kube-system   kube-proxy-x4tqh                     1/1     Running   0          6m15s
 kube-system   kube-scheduler-k8s-master            1/1     Running   0          5m36s
+```
 
+## check node in detail
 ejungpa@k8s-master:~$ kubectl describe nodes k8s-master
 Name:               k8s-master
 Roles:              master
