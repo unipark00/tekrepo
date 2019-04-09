@@ -37,6 +37,18 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
+#### Warning !!!
+[ERROR Swap]: running with swap on is not supported. Please disable swap [#610](https://github.com/kubernetes/kubeadm/issues/610)
+```
+$ swapoff -a
+
+$ kubeadm reset
+$ systemctl daemon-reload
+$ systemctl restart kubelet
+
+$ sudo journalctl -u kubelet.service | grep "failed to run"
+```
+
 ### Installing a pod network add-on
 * You must install a pod network add-on so that your pods can communicate with each other.
 * The network must be deployed before any applications.
@@ -51,7 +63,7 @@ You can install a pod network add-on with the following command:
 kubectl apply -f <add-on.yaml>
 ```
 
-* Flannel  
+#### Flannel  
 1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
 2. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 ```console
