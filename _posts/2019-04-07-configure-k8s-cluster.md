@@ -61,7 +61,7 @@ kubectl apply -f <add-on.yaml>
 1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
 2. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 ```console
-$ sysctl net.bridge.bridge-nf-call-iptables=1
+$ sudo sysctl net.bridge.bridge-nf-call-iptables=1
 $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 3. Apply a pod network add-on (Flannel)  
