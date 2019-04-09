@@ -19,9 +19,9 @@ The **`master`** is the machine where the control plane components run, includin
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
   [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork)
 
-## [Instructions](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)
+## Instructions
 
-## [Installing kubeadm on your hosts](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#installing-kubeadm-on-your-hosts)
+### Installing kubeadm on your hosts
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 [https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
 
