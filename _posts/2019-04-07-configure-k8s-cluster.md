@@ -30,7 +30,7 @@ The **`master`** is the machine where the control plane components run, includin
 1. (Optional) Unless otherwise specified, kubeadm uses the network interface associated with the default gateway to advertise the master’s IP. To use a different network interface, specify the **`--apiserver-advertise-address=<ip-address>`** argument to **`kubeadm init`**.  
 1. (Optional) Run **`kubeadm config images pull`** prior to **`kubeadm init`** to verify connectivity to gcr.io registries.
 
-To make kubectl work for your non-root user, run these commands, which are also part of the `kubeadm init` output:
+To make kubectl work for your non-root user, run these commands, which are also part of the **`kubeadm init`** output:
 ```console
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
