@@ -38,19 +38,20 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 ### Installing a pod network add-on
-- You must install a pod network add-on so that your pods can communicate with each other.
-- The network must be deployed before any applications.
-- CoreDNS will not start up before a network is installed.
-- kubeadm only supports **`Container Network Interface (CNI)`** based networks (and does not support kubenet).
-- If you find a collision between your network plugin’s preferred Pod network and some of your host networks,  
+* You must install a pod network add-on so that your pods can communicate with each other.
+* The network must be deployed before any applications.
+* CoreDNS will not start up before a network is installed.
+* kubeadm only supports **`Container Network Interface (CNI)`** based networks (and does not support kubenet).
+* If you find a collision between your network plugin’s preferred Pod network and some of your host networks,  
   you should think of a suitable CIDR replacement and use that during **`kubeadm init`** with **`--pod-network-cidr`**  
   and as a replacement in your network plugin’s YAML.
-- You can install a pod network add-on with the following command:  
+
+You can install a pod network add-on with the following command:  
 ```console
 kubectl apply -f <add-on.yaml>
 ```
-  
-  (e.g) Flannel  
+
+1. Flannel  
   1. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
   1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
   1. Apply a pod network add-on (Flannel)  
