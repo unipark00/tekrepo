@@ -1,3 +1,16 @@
+---
+title: "kubeadm init - sample result"
+search: false
+categories:
+  - Kubernetes
+last_modified_at: 2019-04-10T21:30+09:00
+toc: false
+---
+
+This post shows the result of flannel installing.
+Master node and all nodes are ready to service ...
+You should join the worker node ~~ !!!
+
 ## After installing flannel ...
 ```
 ejungpa@k8s-master:~$ kubectl apply -f \
