@@ -64,6 +64,7 @@ kubectl apply -f <add-on.yaml>
 $ sudo sysctl net.bridge.bridge-nf-call-iptables=1
 $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
+Note) [kubeadm init result](https://github.com/unipark00/tekrepo/blob/master/_posts/kubeadm_init.txt)
 3. Apply a pod network add-on (Flannel)  
 ```console
 $ kubectl apply -f \
@@ -85,7 +86,6 @@ $ kubectl get nodes
 $ kubectl get pods --all-namespaces
 $ kubectl describe nodes k8s-master
 ```
-
 5. Etc
 ```
 $ kubeadm reset
