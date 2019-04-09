@@ -78,6 +78,7 @@ daemonset.extensions/kube-flannel-ds-s390x create
 ```console
 $ kubectl get nodes
 $ kubectl get pods --all-namespaces
+$ kubectl describe nodes k8s-master
 ```
 
 ## Miscellaneous
