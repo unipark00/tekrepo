@@ -103,6 +103,7 @@ kube-system   kube-scheduler-k8s-master            1/1     Running   0          
 ```
 
 ## check node in detail
+```console
 ejungpa@k8s-master:~$ kubectl describe nodes k8s-master
 Name:               k8s-master
 Roles:              master
