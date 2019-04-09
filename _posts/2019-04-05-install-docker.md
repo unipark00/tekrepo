@@ -4,7 +4,7 @@ search: false
 categories:
   - Kubernetes
 last_modified_at: 2019-04-06T20:30+09:00
-toc: true
+toc: false
 ---
 
 This post shows the Installation of docker as preparation for Kubernetes cluster setup.
