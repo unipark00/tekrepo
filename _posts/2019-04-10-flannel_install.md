@@ -1,5 +1,5 @@
 ---
-title: "kubeadm init - sample result"
+title: "Installing pod network add-on (flannel)"
 search: false
 categories:
   - Kubernetes
