@@ -40,13 +40,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ## Warning !!!
 [ERROR Swap]: running with swap on is not supported. Please disable swap [#610](https://github.com/kubernetes/kubeadm/issues/610)
 ```
-$ swapoff -a
-
-$ kubeadm reset
-$ systemctl daemon-reload
-$ systemctl restart kubelet
-
-$ sudo journalctl -u kubelet.service | grep "failed to run"
+$ swapoff -a // 이것 때문에 엄청 삽질을~~!!!
 ```
 
 ## Installing a pod network add-on
@@ -90,6 +84,15 @@ daemonset.extensions/kube-flannel-ds-s390x create
 $ kubectl get nodes
 $ kubectl get pods --all-namespaces
 $ kubectl describe nodes k8s-master
+```
+
+5. Etc
+```
+$ kubeadm reset
+$ systemctl daemon-reload
+$ systemctl restart kubelet
+
+$ sudo journalctl -u kubelet.service | grep "failed to run"
 ```
 
 # Miscellaneous
