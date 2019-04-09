@@ -72,7 +72,8 @@ $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 3. Apply a pod network add-on (Flannel)  
 ```console
-$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+$ kubectl apply -f \
+    https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 podsecuritypolicy.extensions/psp.flannel.unprivileged created
 clusterrole.rbac.authorization.k8s.io/flannel created
 clusterrolebinding.rbac.authorization.k8s.io/flannel created
