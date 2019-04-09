@@ -1,3 +1,12 @@
+---
+title: "kubeadm init - sample result"
+search: false
+categories:
+  - Kubernetes
+last_modified_at: 2019-04-10T21:30+09:00
+toc: false
+---
+
 ## kubeadm init result
 ```console
 ejungpa@k8s-master:~$ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
