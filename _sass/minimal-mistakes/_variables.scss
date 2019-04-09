@@ -6,10 +6,7 @@
    Typography
    ========================================================================== */
 
-/*
-$doc-font-size: 16 !default;
-*/
-$doc-font-size: 15 !default;
+$doc-font-size: 15 !default; // original 16
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
@@ -144,10 +141,14 @@ $x-large: 1280px !default;
 /*
    Grid
    ========================================================================== */
-
+/*
 $right-sidebar-width-narrow: 200px !default;
 $right-sidebar-width: 300px !default;
 $right-sidebar-width-wide: 400px !default;
+*/
+$right-sidebar-width-narrow: 0px !default;
+$right-sidebar-width: 0px !default;
+$right-sidebar-width-wide: 0px !default;
 
 /*
    Other
