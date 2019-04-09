@@ -91,7 +91,6 @@ $ kubectl describe nodes k8s-master
 $ kubeadm reset
 $ systemctl daemon-reload
 $ systemctl restart kubelet
-
 $ sudo journalctl -u kubelet.service | grep "failed to run"
 ```
 
