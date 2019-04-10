@@ -13,9 +13,7 @@ Currently, your Master node are ready to do service ...
 You should join the worker node ~~ !!!  
 
 ## After installing flannel ...
-### cmd: 
-### kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-```
+```console
 ejungpa@k8s-master:~$ kubectl apply -f \
 >    https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 podsecuritypolicy.extensions/psp.flannel.unprivileged created
