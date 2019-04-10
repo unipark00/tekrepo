@@ -48,8 +48,9 @@ auto enp0s3
 iface enp0s3 inet static
 address 10.0.0.X
 netmask 255.255.255.0
-network 10.0.0.1
+network 10.0.0.0
 broadcast 10.0.0.255
+gateway 10.0.0.1
 ```
 
 C. Ubuntu Desktop (Master node) 설정  
