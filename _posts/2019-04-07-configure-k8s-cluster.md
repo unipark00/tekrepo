@@ -41,7 +41,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ## Warning !!!
 [ERROR Swap]: running with swap on is not supported. Please disable swap [#610](https://github.com/kubernetes/kubeadm/issues/610)
 ```
-$ swapoff -a // 이것 때문에 엄청 삽질을~~!!!
+$ sudo swapoff -a // 이것 때문에 엄청 삽질을~~!!!
 ```
 
 ## Installing a pod network add-on
