@@ -8,7 +8,8 @@ toc: false
 ---
 
 This post shows the result of flannel installing.  
-Master node and all nodes are ready to service ...  
+
+Currently, your Master node are ready to do service ...  
 You should join the worker node ~~ !!!  
 
 ## After installing flannel ...
