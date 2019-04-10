@@ -32,12 +32,12 @@ tcp6       0      0 :::80             :::*                LISTEN
 Port 22
 ```
 
-## 2) k8s cluster를 위한 NAT Network 설정
+## 2) NAT network setup for k8s cluster
 
-A. NatNetwork 만들기  
+A. Create NatNetwork  
    * VirtualBox - File - Preference - Network - NatNetwork (10.0.0.0/24)
 
-B. Ubuntu Server (Worker node) 설정  
+B. Ubuntu Server (Worker node)
 ```console
 root@ubuntu:/etc/network$ vi interfaces
 
@@ -53,8 +53,8 @@ broadcast 10.0.0.255
 gateway 10.0.0.1
 ```
 ![ubuntu-18.04.2](https://github.com/unipark00/tekrepo/blob/master/_posts/20190410_165245.png?raw=true)  
-C. Ubuntu Desktop (Master node) 설정  
+C. Ubuntu Desktop (Master node)  
    * Modify configuration via Network Manager instead of interface file.
    * Settings -> Network -> Ehternet (enp0s3) -> IPv4
-     * IPv4 Method를 Manual로 변경 후, 해당 정보 입력
-     * DNS는 AUTO -> nslookup 검색 결과로
+     * IPv4 Method = Manual, then input the new configuration
+     * DNS: AUTO -> nslookup
