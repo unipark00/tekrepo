@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "en-US"
-title                    : "J.H.P's Tech Repo"
+title                    : "J's Tech Repo"
 title_separator          : "-"
 name                     : "Tekrepo"
-description              : "J.H.P's Tech Repo"
+description              : "J's Tech Repo"
 url                      : "https://unipark00.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "tekrepo" # the subpath of your site, e.g. "/blog"
 repository               : "unipark00/tekrepo" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
