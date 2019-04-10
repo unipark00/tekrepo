@@ -52,6 +52,7 @@ network 10.0.0.0
 broadcast 10.0.0.255
 gateway 10.0.0.1
 ```
+![ubuntu-18.04.2](https://github.com/unipark00/tekrepo/blob/master/_posts/20190410_165245.png?raw=true)
 C. Ubuntu Desktop (Master node) 설정  
    * interface 파일 대신 Network Manager로 수정  
    * Settings -> Network -> Ehternet (enp0s3) -> IPv4  
