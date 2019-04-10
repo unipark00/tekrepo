@@ -52,9 +52,9 @@ network 10.0.0.0
 broadcast 10.0.0.255
 gateway 10.0.0.1
 ```
-![ubuntu-18.04.2](https://github.com/unipark00/tekrepo/blob/master/_posts/20190410_165245.png?raw=true)
+![ubuntu-18.04.2](https://github.com/unipark00/tekrepo/blob/master/_posts/20190410_165245.png?raw=true)  
 C. Ubuntu Desktop (Master node) 설정  
-   * interface 파일 대신 Network Manager로 수정  
-   * Settings -> Network -> Ehternet (enp0s3) -> IPv4  
+   * Modify configuration via Network Manager instead of interface file.
+   * Settings -> Network -> Ehternet (enp0s3) -> IPv4
      * IPv4 Method를 Manual로 변경 후, 해당 정보 입력
-     * DNS는 AUTO -> nslookup 검색 결과로 
+     * DNS는 AUTO -> nslookup 검색 결과로
