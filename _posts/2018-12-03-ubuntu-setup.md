@@ -52,9 +52,6 @@ network 10.0.0.0
 broadcast 10.0.0.255
 gateway 10.0.0.1
 ```
-note) ubuntu-18.04.2-live-server-amd64 기준 --> 좀 더 쉽당~
-![ip_configuration](https://github.com/unipark00/tekrepo/blob/master/_posts/20190410_165245.png)
-
 C. Ubuntu Desktop (Master node) 설정  
    * interface 파일 대신 Network Manager로 수정  
    * Settings -> Network -> Ehternet (enp0s3) -> IPv4  
