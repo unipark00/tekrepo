@@ -53,7 +53,9 @@ $ sudo swapoff -a // 이것 때문에 엄청 삽질을~~!!!
 You can install a pod network add-on with the following command:  
 ```console
 kubectl apply -f <add-on.yaml>
-```
+```  
+
+![pod-network](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_132750.png?raw=true)
 
 ### Flannel  
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
