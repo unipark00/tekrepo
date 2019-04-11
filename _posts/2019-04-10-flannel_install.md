@@ -7,7 +7,7 @@ last_modified_at: 2019-04-10T21:30+09:00
 toc: false
 ---
 
-This post shows the result of flannel installing.  
+This post shows the result of flannel installing.
 
 ## After installing flannel ...
 ```console
