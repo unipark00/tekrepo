@@ -15,7 +15,6 @@ This post shows the creation of a single master cluster with kubeadm.
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
   [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork)  
 
------
 # Instructions
 
 ## Installing kubeadm on your hosts
