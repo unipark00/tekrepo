@@ -7,9 +7,7 @@ last_modified_at: 2019-04-07T21:30+09:00
 toc: false
 ---
 
-This post shows the creation of a single master cluster with kubeadm.
-
-[https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)  
+This post shows the creation of a single master cluster with kubeadm.  
 
 # Overview
 * Kubernetes 설치 후, **`Master Node`** 초기화
