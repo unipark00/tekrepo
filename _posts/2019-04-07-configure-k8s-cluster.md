@@ -42,10 +42,9 @@ $ sudo swapoff -a // 이것 때문에 엄청 삽질을~~!!!
 ```
 
 ## Installing a pod network add-on
-* You must install a pod network add-on so that your pods can communicate with each other.
-* The network must be deployed before any applications.
-* CoreDNS will not start up before a network is installed.
-* kubeadm only supports **`Container Network Interface (CNI)`** based networks (and does not support kubenet).
+* You must install a pod network add-on so that your pods can communicate with each other. ([add-on pages](https://kubernetes.io/docs/concepts/cluster-administration/addons/))  
+* The network must be deployed before any applications. CoreDNS will not start up before a network is installed.  
+* kubeadm only supports **`Container Network Interface (CNI)`** based networks (and does not support kubenet).  
 * If you find a collision between your network plugin’s preferred Pod network and some of your host networks,  
   you should think of a suitable CIDR replacement and use that during **`kubeadm init`** with **`--pod-network-cidr`**  
   and as a replacement in your network plugin’s YAML.
@@ -98,6 +97,7 @@ $ sudo journalctl -u kubelet.service | grep "failed to run"
 # Miscellaneous
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 * [Add-ons](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
+* [What is CNI?](https://github.com/containernetworking/cni#cni---the-container-network-interface)
 
 # Troubleshooting
 * Swap disabled
