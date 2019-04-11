@@ -35,7 +35,9 @@ Port 22
 ## 2) NAT network setup for k8s cluster
 
 A. Create NatNetwork  
-   * VirtualBox - File - Preference - Network - NatNetwork (10.0.0.0/24)
+   * VirtualBox - File - Preference - Network - NatNetwork (e.g. 10.0.0.0/24)
+![NatNetwork1](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_105355.png)  
+![NatNetwork2](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_105409.png)
 
 B. Ubuntu Server (Worker node)
 ```console
