@@ -24,9 +24,9 @@ This post shows the creation of a single master cluster with kubeadm.
 ## Initializing your master
 The **`master`** is the machine where the control plane components run, including etcd (the cluster database) and the API server (which the kubectl CLI communicates with).  
 1. Choose a pod network add-on, and verify whether it requires any arguments to be passed to kubeadm initialization. Depending on which third-party provider you choose, you might need to set the **`--pod-network-cidr`** to a provider-specific value. See [Installing a pod network add-on](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network).  
-1. (Optional) To use different container runtime or if there are more than one installed on the provisioned node, specify the **`--cri-socket`** argument to **```kubeadm init```**.
+1. (Optional) To use different container runtime or if there are more than one installed on the provisioned node, specify the **`--cri-socket`** argument to **```kubeadm init```**.  
 1. (Optional) Unless otherwise specified, kubeadm uses the network interface associated with the default gateway to advertise the master’s IP. To use a different network interface, specify the **`--apiserver-advertise-address=<ip-address>`** argument to **`kubeadm init`**.  
-1. (Optional) Run **`kubeadm config images pull`** prior to **`kubeadm init`** to verify connectivity to gcr.io registries.
+1. (Optional) Run **`kubeadm config images pull`** prior to **`kubeadm init`** to verify connectivity to gcr.io registries.  
 
 To make kubectl work for your non-root user, run these commands, which are also part of the **`kubeadm init`** output:
 ```console
