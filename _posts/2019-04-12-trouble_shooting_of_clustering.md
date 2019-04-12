@@ -7,7 +7,8 @@ last_modified_at: 2019-04-12T21:30+09:00
 toc: false
 ---
 
-This post shows the trouble shooting of k8s cluster configuration.
+This post shows the trouble shooting of k8s cluster configuration.  
+  
 
 1. swap disabled
 ```console
