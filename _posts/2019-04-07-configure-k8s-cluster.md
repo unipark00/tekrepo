@@ -113,3 +113,4 @@ $ kubectl get secret $(kubectl get serviceaccount cluster-admin-dashboard-sa \
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 * [Add-ons](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
 * [What is CNI?](https://github.com/containernetworking/cni#cni---the-container-network-interface)
+* [Monitoring Kubernetes with Prometheus](https://linuxacademy.com/blog/kubernetes/running-prometheus-on-kubernetes/?utm_source=website&utm_medium=blog&utm_campaign=2019_kubernetes)
