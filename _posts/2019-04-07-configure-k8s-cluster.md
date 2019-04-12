@@ -122,23 +122,8 @@ $ vi /etc/fstab
 #/swapfile // desktop version
 #/swap.img // server version
 ```
-* check log w/ journalctl
+* check log with journalctl
 ```console
 // today log
 # journalctl --since=today
-
-// log check w/ duration
-# journalctl --since=yyyy-MM-dd --util=yyyy-MM-dd
-
-// log check since last reboot
-# journalctl -b
-
-// log check w/ specific options (option => emerg, alert, crit, err, warning, notic, info, debug)
-# journalctl -p [option]
-
-// tail -f
-# journalctl -f
-
-// service log check (e.g. kubelet service)
-# journalctl -u kubelet.service or journalctl -u kubelet
 ```
