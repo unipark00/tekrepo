@@ -87,11 +87,14 @@ $ kubectl get pods --all-namespaces
 $ kubectl get pods -n kube-system
 $ kubectl describe nodes k8s-master
 ```
-## Installing dashboard
+
+## Installing a pod network add-on
 https://github.com/kubernetes/dashboard
 ```console
-$ kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
-```
+$ kubectl create -f \
+    https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+```  
+
 # Miscellaneous
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 * [Add-ons](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
