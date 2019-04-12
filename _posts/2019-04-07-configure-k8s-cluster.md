@@ -112,4 +112,26 @@ $ systemctl restart kubelet
 $ vi /etc/fstab
 #/swapfile
 ```
+* check log files w/ journalctl
+```console
+// 전반적인 로그 확인
+# journalctl 
 
+// '오늘' 로그 확인
+# journalctl --since=today
+
+// 특정기간 로그 확인
+# journalctl --since=yyyy-MM-dd --util=yyyy-MM-dd
+
+// 마지막 부팅 후 로그 확인
+# journalctl -b
+
+// 특정 속성에 따른 로그 확인 (option => emerg, alert, crit, err, warning, notic, info, debug)
+# journalctl -p [option]
+
+// 한 번 실행으로 종료하지 않고 계속 로그 확인(tail -F 와 비슷한 기능)
+# journalctl -f
+
+// test 서비스 로그 확인
+# journalctl -u kubelet.service or journalctl -u kubelet
+```
