@@ -52,7 +52,12 @@ workaround --> 4GB, 4Core VM
 ```  
 1. query or create a token (`kubeadm join`)
 ```console
+// Token
 $ kubeadm token list
+// CA cert hash
+$ openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | \
+    openssl dgst -sha256 -hex | sed 's/^.* //'
 or
+// New command
 $ kubeadm token create --print-join-command
 ```
