@@ -126,5 +126,10 @@ $ vi /etc/fstab
 * check log with journalctl
 ```console
 // today log
-# journalctl --since=today
+$ journalctl --since=today
+// specific service
+$ journalctl -f -u kubelet.service
 ```
+* kswapd0 CPU 100% problem  
+--> higher performance vm (4G, 4Core)
+
