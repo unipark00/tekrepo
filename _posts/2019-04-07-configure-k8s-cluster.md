@@ -87,7 +87,11 @@ $ kubectl get pods --all-namespaces
 $ kubectl get pods -n kube-system
 $ kubectl describe nodes k8s-master
 ```
-
+## Installing dashboard
+https://github.com/kubernetes/dashboard
+```console
+$ kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+```
 # Miscellaneous
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 * [Add-ons](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
@@ -130,5 +134,7 @@ $ journalctl --since=today
 // specific service
 $ journalctl -f -u kubelet.service
 ```
-* kswapd0 CPU 100% problem  
-#### High performance vm (4G, 4Core)
+* kswapd0 CPU 100% problem
+```console
+workaround --> 4GB, 4Core VM
+```
