@@ -16,7 +16,7 @@ $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
-1. `kubeadm` cheat sheet
+1. `kubeadm` cheat sheet  
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 ```console
 will be updated ...
