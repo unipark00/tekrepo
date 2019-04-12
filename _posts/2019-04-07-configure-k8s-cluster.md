@@ -117,8 +117,10 @@ $ kubeadm reset
 ```
 * **permanently swapoff** after reboot
 ```console
+// based on ubuntu 18.04 LTS
 $ vi /etc/fstab
-#/swapfile
+#/swapfile // desktop version
+#/swap.img // server version
 ```
 * check log w/ journalctl
 ```console
