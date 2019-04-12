@@ -86,13 +86,6 @@ $ kubectl get nodes
 $ kubectl get pods --all-namespaces
 $ kubectl describe nodes k8s-master
 ```
-5. Etc
-```
-$ kubeadm reset
-$ systemctl daemon-reload
-$ systemctl restart kubelet
-$ sudo journalctl -u kubelet.service | grep "failed to run"
-```
 
 # Miscellaneous
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
@@ -107,7 +100,22 @@ $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
-* permanently **swapoff** after reboot
+* kubeadm cheat sheet
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+```console
+will be updated ...
+```
+* kubelet service restart
+```console
+$ systemctl daemon-reload
+$ systemctl restart kubelet
+$ sudo journalctl -u kubelet.service | grep "failed to run"
+```
+* kubelet(k8s) init
+```console
+$ kubeadm reset
+```
+* **permanently swapoff** after reboot
 ```console
 $ vi /etc/fstab
 #/swapfile
@@ -132,6 +140,6 @@ $ vi /etc/fstab
 // 한 번 실행으로 종료하지 않고 계속 로그 확인(tail -F 와 비슷한 기능)
 # journalctl -f
 
-// test 서비스 로그 확인
+// kubelet 서비스 로그 확인
 # journalctl -u kubelet.service or journalctl -u kubelet
 ```
