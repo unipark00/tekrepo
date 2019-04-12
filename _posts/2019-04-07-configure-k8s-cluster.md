@@ -115,43 +115,49 @@ $ kubectl get secret $(kubectl get serviceaccount cluster-admin-dashboard-sa \
 * [What is CNI?](https://github.com/containernetworking/cni#cni---the-container-network-interface)
 
 # Troubleshooting
-* swap disabled
+1. swap disabled
 ```console
 $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
     /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
-* kubeadm cheat sheet
+1. kubeadm cheat sheet
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 ```console
 will be updated ...
 ```
-* kubelet service restart
+1. kubelet service restart
 ```console
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 $ sudo journalctl -u kubelet.service | grep "failed to run"
 ```
-* k8s init
+1. k8s init
 ```console
 $ kubeadm reset
 ```
-* **permanently swapoff** after reboot
+1. **permanently swapoff** after reboot
 ```console
 // based on ubuntu 18.04 LTS
 $ vi /etc/fstab
 #/swapfile // desktop version
 #/swap.img // server version
 ```
-* check log with journalctl
+1. check log with journalctl
 ```console
 // today log
 $ journalctl --since=today  
 // specific service
 $ journalctl -f -u kubelet.service
 ```
-* kswapd0 CPU 100% problem
+1. kswapd0 CPU 100% problem
 ```console
 workaround --> 4GB, 4Core VM
+```  
+1. query or create a token
+```console
+$ kubeadm token list
+or
+$ kubeadm token create --print-join-command
 ```
