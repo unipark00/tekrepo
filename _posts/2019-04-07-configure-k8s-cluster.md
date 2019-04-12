@@ -127,6 +127,7 @@ $ vi /etc/fstab
 ```console
 // today log
 $ journalctl --since=today
+
 // specific service
 $ journalctl -f -u kubelet.service
 ```
