@@ -100,10 +100,16 @@ $ sudo journalctl -u kubelet.service | grep "failed to run"
 * [What is CNI?](https://github.com/containernetworking/cni#cni---the-container-network-interface)
 
 # Troubleshooting
-* Swap disabled
+* swap disabled
 ```console
 $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
     /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
+* permanently **swapoff** after reboot
+```console
+$ vi /etc/fstab
+#/swapfile
+```
+
