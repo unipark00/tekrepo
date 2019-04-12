@@ -101,7 +101,7 @@ $ kubectl create -f \
 $ kubectl -n kube-system describe $(kubectl -n kube-system \
     get secret -n kube-system -o name | grep namespace) | grep token
 or
-// w/ service account
+// w/ service account (안됨~~)
 $ kubectl create serviceaccount cluster-admin-dashboard-sa
 $ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
     --clusterrole=cluster-admin --serviceaccount=default:cluster-admin-dashboard-sa
