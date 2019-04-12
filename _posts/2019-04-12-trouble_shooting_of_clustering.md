@@ -17,10 +17,10 @@ $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
 1. `kubeadm` cheat sheet  
-https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 ```console
 will be updated ...
 ```
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 1. kubelet service restart
 ```console
 $ systemctl daemon-reload
