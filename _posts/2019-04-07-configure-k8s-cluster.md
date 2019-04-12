@@ -88,12 +88,26 @@ $ kubectl get pods -n kube-system
 $ kubectl describe nodes k8s-master
 ```
 
-## Installing a pod network add-on
+## Installing a dashboard
 https://github.com/kubernetes/dashboard
+* Getting Started
 ```console
 $ kubectl create -f \
     https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
 ```  
+* Create An Authentication Token (RBAC)
+```console
+$ kubectl -n kube-system describe $(kubectl -n kube-system \
+    get secret -n kube-system -o name | grep namespace) | grep token
+```
+or
+```
+$ kubectl create serviceaccount cluster-admin-dashboard-sa
+$ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
+    --clusterrole=cluster-admin --serviceaccount=default:cluster-admin-dashboard-sa
+$ kubectl get secret $(kubectl get serviceaccount cluster-admin-dashboard-sa \
+    -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+```
 
 # Miscellaneous
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
