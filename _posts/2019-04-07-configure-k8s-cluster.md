@@ -131,5 +131,4 @@ $ journalctl --since=today
 $ journalctl -f -u kubelet.service
 ```
 * kswapd0 CPU 100% problem  
-*** High performance vm (4G, 4Core)
-```
+#### High performance vm (4G, 4Core)
