@@ -16,7 +16,7 @@ $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
-1. kubeadm cheat sheet
+1. `kubeadm` cheat sheet
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 ```console
 will be updated ...
@@ -27,29 +27,29 @@ $ systemctl daemon-reload
 $ systemctl restart kubelet
 $ sudo journalctl -u kubelet.service | grep "failed to run"
 ```
-1. k8s init
+1. reset k8s
 ```console
 $ kubeadm reset
 ```
-1. **permanent** swapoff after reboot
+1. **permanent** `swapoff` after reboot
 ```console
 // based on ubuntu 18.04 LTS
 $ vi /etc/fstab
 # /swapfile // desktop version
 # /swap.img // server version
 ```
-1. check log with journalctl
+1. log monitoing with `journalctl`
 ```console
 // today log
 $ journalctl --since=today  
 // specific service
 $ journalctl -f -u kubelet.service
 ```
-1. kswapd0 CPU 100% problem
+1. `kswapd0` CPU 100% problem
 ```console
 workaround --> 4GB, 4Core VM
 ```  
-1. query or create a token
+1. query or create a token (`kubeadm join`)
 ```console
 $ kubeadm token list
 or
