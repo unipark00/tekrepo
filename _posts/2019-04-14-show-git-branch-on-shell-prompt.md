@@ -15,7 +15,15 @@ cd ~
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O .git-prompt.sh
 ```
 ## 2) Edit ~/.bashrc
-PS1 보다 위에 아래 내용을 추가
+1) PS1 보다 위에 아래 내용을 추가
 ```console
 source ~/.git-prompt.sh
+```
+2) PS1 설정 변경 : $(__git_ps1) 추가
+```console
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$$(__git_ps1) '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$$(__git_ps1) '
+fi
 ```
