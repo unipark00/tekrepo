@@ -27,3 +27,9 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$$(__git_ps1) '
 fi
 ```
+## 3) Result
+```console
+junho85@junho85:~/git_branch_test$ (my-branch) git checkout master
+Switched to branch 'master'
+junho85@junho85:~/git_branch_test$ (master)
+```
