@@ -2,7 +2,7 @@
 title: "Show git branch on shell prompt"
 search: false
 categories:
-  - Ubuntu
+  - Git
 last_modified_at: 2019-04-14T10:00+09:00
 toc: false
 ---
