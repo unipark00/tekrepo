@@ -32,7 +32,7 @@ sudo add-apt-repository \
 
 ## Install Docker CE
 sudo apt-get update && sudo apt-get install -y docker-ce=18.06.2~ce~3-0~ubuntu
-
+-----
 # Setup daemon
 sudo su
 cat > /etc/docker/daemon.json <<EOF
@@ -47,7 +47,7 @@ cat > /etc/docker/daemon.json <<EOF
 EOF
 
 mkdir -p /etc/systemd/system/docker.service.d
-
+-----
 # Restart docker
 systemctl daemon-reload
 systemctl restart docker
