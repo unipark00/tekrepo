@@ -39,3 +39,6 @@ kube-system   kube-flannel-ds-amd64-c9ppn          1/1     Running   0          
 kube-system   kube-proxy-x4tqh                     1/1     Running   0          24m
 kube-system   kube-scheduler-k8s-master            1/1     Running   0          23m
 ```
+
+## 2) Calico
+![Calio: How it works](https://docs.projectcalico.org/images/calico-arch-gen-v3.1.svg)
