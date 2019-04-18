@@ -93,20 +93,16 @@ sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 $ kubectl apply -f \
         https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
 configmap/calico-config created
-service/calico-typha created
-deployment.apps/calico-typha created
-poddisruptionbudget.policy/calico-typha created
+daemonset.extensions/calico-etcd created
+service/calico-etcd created
 daemonset.extensions/calico-node created
-serviceaccount/calico-node created
-customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created      
+deployment.extensions/calico-kube-controllers created
+clusterrolebinding.rbac.authorization.k8s.io/calico-cni-plugin created
+clusterrole.rbac.authorization.k8s.io/calico-cni-plugin created
+serviceaccount/calico-cni-plugin created
+clusterrolebinding.rbac.authorization.k8s.io/calico-kube-controllers created
+clusterrole.rbac.authorization.k8s.io/calico-kube-controllers created
+serviceaccount/calico-kube-controllers created
 ```
 
 ## 4) Installing a dashboard
