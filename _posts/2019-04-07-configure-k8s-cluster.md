@@ -54,7 +54,7 @@ You can install a pod network add-on with the following command:
 kubectl apply -f <add-on.yaml>
 ```  
 ### Flannel  
-![pod-network](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_132750.png?raw=true)  
+![flannel](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_132750.png?raw=true)  
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 2. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
 ```console
@@ -85,7 +85,14 @@ $ kubectl get pods --all-namespaces
 $ kubectl get pods -n kube-system
 $ kubectl describe nodes k8s-master
 ```
-
+### Calico
+![calico](https://github.com/unipark00/tekrepo/blob/master/_posts/20190418_182218.png?raw=true)
+1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
+2. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
+```console
+$ sudo sysctl net.bridge.bridge-nf-call-iptables=1
+$ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+```
 ## Installing a dashboard
 https://github.com/kubernetes/dashboard
 * Getting Started
