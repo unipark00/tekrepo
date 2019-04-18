@@ -2,7 +2,7 @@
 title: "Docker Cheat Sheet"
 search: false
 categories:
-  - Kubernetes
+  - Docker
 last_modified_at: 2019-04-18T21::00+09:00
 toc: false
 ---
