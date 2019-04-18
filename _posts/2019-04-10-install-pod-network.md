@@ -41,6 +41,7 @@ kube-system   kube-scheduler-k8s-master            1/1     Running   0          
 ```
 
 ## 2) Calico
+[About Calico](https://docs.projectcalico.org/v3.1/introduction/)
 ![Calio: How it works](https://docs.projectcalico.org/images/calico-arch-gen-v3.1.svg)
 
 Calico leverages the routing and iptables firewall capabilities native to the Linux kernel. All traffic to and from individual containers, virtual machines, and hosts traverses these in-kernel rules before being routed to its destination.
