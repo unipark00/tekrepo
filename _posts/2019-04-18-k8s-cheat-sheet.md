@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Cheat Sheet by unipark00"
+title: "Kubernetes Cheat Sheet"
 search: false
 categories:
   - Kubernetes
