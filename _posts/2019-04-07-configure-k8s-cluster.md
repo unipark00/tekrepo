@@ -17,11 +17,11 @@ This post shows the creation of a single master cluster with kubeadm.
 
 # Instructions
 
-## Installing kubeadm on your hosts
+## 1) Installing kubeadm on your hosts
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 [https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
 
-## Initializing your master
+## 2) Initializing your master node
 The **`master`** is the machine where the control plane components run, including etcd (the cluster database) and the API server (which the kubectl CLI communicates with).  
 1. Choose a pod network add-on, and verify whether it requires any arguments to be passed to kubeadm initialization. Depending on which third-party provider you choose, you might need to set the **`--pod-network-cidr`** to a provider-specific value. See [Installing a pod network add-on](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network).  
 1. (Optional) To use different container runtime or if there are more than one installed on the provisioned node, specify the **`--cri-socket`** argument to **```kubeadm init```**.  
@@ -34,14 +34,12 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-
-## Warning !!!
+### Warning !!!
 [ERROR Swap]: running with swap on is not supported. Please disable swap [#610](https://github.com/kubernetes/kubeadm/issues/610)
 ```
 sudo swapoff -a // 이것 때문에 엄청 삽질을~~!!!
 ```
-
-## Installing a pod network add-on
+## 3) Installing a pod network add-on
 * You must install a pod network add-on so that your pods can communicate with each other. ([add-on pages](https://kubernetes.io/docs/concepts/cluster-administration/addons/))  
 * The network must be deployed before any applications. CoreDNS will not start up before a network is installed.  
 * kubeadm only supports **`Container Network Interface (CNI)`** based networks (and does not support kubenet).  
@@ -62,9 +60,8 @@ sudo sysctl net.bridge.bridge-nf-call-iptables=1
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 Note) [kubeadm init result](https://unipark00.github.io/tekrepo/kubernetes/kubeadm_init_sample_result/)  
-
 3. Install a pod network add-on (Flannel)  
-Install Flannel with the following command.
+Install Flannel with the following command.  
 ```console
 kubectl apply -f \
       https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
@@ -84,10 +81,10 @@ daemonset.extensions/kube-flannel-ds-s390x create
 ```
 4. Check that the CoreDNS pod is Running
 ```console
-$ kubectl get nodes
-$ kubectl get pods --all-namespaces
-$ kubectl get pods -n kube-system
-$ kubectl describe nodes k8s-master
+kubectl get nodes
+kubectl get pods --all-namespaces
+kubectl get pods -n kube-system
+kubectl describe nodes k8s-master
 ```
 ### Calico
 ![calico](https://github.com/unipark00/tekrepo/blob/master/_posts/20190418_182218.png?raw=true)
@@ -97,9 +94,15 @@ $ kubectl describe nodes k8s-master
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 ```
+3. Install a pod network add-on (Calico)  
+Install Calico with the following command.  
 ```console
 kubectl apply -f \
     https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+```
+You should see the following output.
+```console
+
 ```
 ## Installing a dashboard
 https://github.com/kubernetes/dashboard
