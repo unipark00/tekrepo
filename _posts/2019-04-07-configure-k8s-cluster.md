@@ -129,7 +129,7 @@ kube-system   kube-scheduler-k8s-master                  1/1     Running   1    
 ```  
 
 ## 4) Installing a dashboard
-https://github.com/kubernetes/dashboard
+[https://github.com/kubernetes/dashboard](https://github.com/kubernetes/dashboard)
 * Getting Started
 ```console
 $ kubectl create -f \
