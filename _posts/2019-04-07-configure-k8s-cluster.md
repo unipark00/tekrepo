@@ -91,7 +91,7 @@ sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 3. Install Calico with the following command.  
 ```console
 $ kubectl apply -f \
-    https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+      https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
 ```
 
 ## 4) Installing a dashboard
@@ -99,20 +99,20 @@ https://github.com/kubernetes/dashboard
 * Getting Started
 ```console
 $ kubectl create -f \
-    https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+      https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
 ```  
 * Create An Authentication Token (RBAC)
 ```console
 // w/o service account
-$ kubectl -n kube-system describe $(kubectl -n kube-system \
-    get secret -n kube-system -o name | grep namespace) | grep token
+kubectl -n kube-system describe $(kubectl -n kube-system \
+      get secret -n kube-system -o name | grep namespace) | grep token
 or
 // w/ service account (안됨~~)
-$ kubectl create serviceaccount cluster-admin-dashboard-sa
-$ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
-    --clusterrole=cluster-admin --serviceaccount=default:cluster-admin-dashboard-sa
-$ kubectl get secret $(kubectl get serviceaccount cluster-admin-dashboard-sa \
-    -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+kubectl create serviceaccount cluster-admin-dashboard-sa
+kubectl create clusterrolebinding cluster-admin-dashboard-sa \
+      --clusterrole=cluster-admin --serviceaccount=default:cluster-admin-dashboard-sa
+kubectl get secret $(kubectl get serviceaccount cluster-admin-dashboard-sa \
+      -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 ```
 
 # Miscellaneous
