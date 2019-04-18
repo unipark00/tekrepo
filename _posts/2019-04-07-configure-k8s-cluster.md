@@ -78,8 +78,8 @@ watch kubectl get pods --all-namespaces
 ```  
 
 ### Calico
-![calico](https://github.com/unipark00/tekrepo/blob/master/_posts/20190418_182218.png?raw=true)
 #### [Project Calico: Getting Started](https://docs.projectcalico.org/v3.6/getting-started/kubernetes/)
+![calico](https://github.com/unipark00/tekrepo/blob/master/_posts/20190418_182218.png?raw=true)
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 2. Pass **`--pod-network-cidr=192.168.0.0/16`** to **`kubeadm init`**  
 ```console
