@@ -60,7 +60,7 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 3. Install Flannel with the following command.
 ```console
 $ kubectl apply -f \
-      https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+    https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 podsecuritypolicy.extensions/psp.flannel.unprivileged created
 clusterrole.rbac.authorization.k8s.io/flannel created
 clusterrolebinding.rbac.authorization.k8s.io/flannel created
@@ -91,7 +91,23 @@ sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 3. Install Calico with the following command.  
 ```console
 $ kubectl apply -f \
-      https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+    https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+configmap/calico-config created
+service/calico-typha created
+deployment.apps/calico-typha created
+poddisruptionbudget.policy/calico-typha created
+daemonset.extensions/calico-node created
+serviceaccount/calico-node created
+customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
+      
 ```
 
 ## 4) Installing a dashboard
