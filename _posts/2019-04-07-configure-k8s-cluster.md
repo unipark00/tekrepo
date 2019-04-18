@@ -51,7 +51,7 @@ You can install a pod network add-on with the following command:
 ```console
 kubectl apply -f <add-on.yaml>
 ```  
-### Flannel  
+### Flannel
 ![flannel](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_132750.png?raw=true)  
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 2. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
@@ -59,14 +59,10 @@ kubectl apply -f <add-on.yaml>
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
-3. Install a pod network add-on (Flannel)  
-Install Flannel with the following command.  
+3. Install Flannel with the following command.
 ```console
-kubectl apply -f \
+$ kubectl apply -f \
       https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-```
-You should see the following output.
-```console
 podsecuritypolicy.extensions/psp.flannel.unprivileged created
 clusterrole.rbac.authorization.k8s.io/flannel created
 clusterrolebinding.rbac.authorization.k8s.io/flannel created
@@ -98,8 +94,8 @@ Install Calico with the following command.
 ```console
 kubectl apply -f \
     https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
-```
-You should see the following output.
+```  
+You should see the following output.  
 ```console
 
 ```
