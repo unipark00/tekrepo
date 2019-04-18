@@ -9,7 +9,7 @@ toc: false
 
 This post shows the Installation of kubeadm, kubelet and kubectl.
 
-## Master node : kubelet, kubeadm, kubectl
+## Master node: kubelet, kubeadm, kubectl
 ```console
 # sudo apt-get update && sudo apt-get install -y apt-transport-https curl
 # curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
@@ -19,7 +19,7 @@ This post shows the Installation of kubeadm, kubelet and kubectl.
 # sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-## Worker node(s) : kubelet, kubeadm
+## Worker node: kubelet, kubeadm
 ```console
 # sudo apt-get update && sudo apt-get install -y apt-transport-https curl
 # curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
