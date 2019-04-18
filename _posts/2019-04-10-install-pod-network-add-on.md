@@ -1,5 +1,5 @@
 ---
-title: "Installing pod network add-on (flannel)"
+title: "Installing pod network add-ons"
 search: false
 categories:
   - Kubernetes
@@ -7,9 +7,9 @@ last_modified_at: 2019-04-10T21:30+09:00
 toc: false
 ---
 
-This post shows the result of flannel installing.
+This post shows the result of installing pod network add-on.
 
-## Install flannel
+## 1) flannel
 ```console
 ejungpa@k8s-master:~$ kubectl apply -f \
 >    https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
