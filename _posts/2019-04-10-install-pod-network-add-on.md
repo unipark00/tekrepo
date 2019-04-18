@@ -9,7 +9,7 @@ toc: false
 
 This post shows the result of flannel installing.
 
-## After installing flannel ...
+## Install flannel
 ```console
 ejungpa@k8s-master:~$ kubectl apply -f \
 >    https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
