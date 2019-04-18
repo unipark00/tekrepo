@@ -74,10 +74,7 @@ daemonset.extensions/kube-flannel-ds-s390x create
 ```
 4. Check that the CoreDNS pod is Running
 ```console
-kubectl get nodes
-kubectl get pods --all-namespaces
-kubectl get pods -n kube-system
-kubectl describe nodes k8s-master
+watch kubectl get pods --all-namespaces
 ```  
 
 ### Calico
@@ -115,6 +112,20 @@ serviceaccount/calico-node created
 deployment.extensions/calico-kube-controllers created
 serviceaccount/calico-kube-controllers created
 ```
+4. Wait until each pod has the STATUS of Running.
+```console
+$ watch kubectl get pods --all-namespaces
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
+kube-system   calico-kube-controllers-5cbcccc885-479x9   1/1     Running   0          3m40s
+kube-system   calico-node-7pb9v                          1/1     Running   0          3m41s
+kube-system   coredns-fb8b8dccf-9rchh                    1/1     Running   0          9m32s
+kube-system   coredns-fb8b8dccf-z9n9g                    1/1     Running   0          9m32s
+kube-system   etcd-k8s-master                            1/1     Running   0          8m38s
+kube-system   kube-apiserver-k8s-master                  1/1     Running   0          8m45s
+kube-system   kube-controller-manager-k8s-master         1/1     Running   1          8m51s
+kube-system   kube-proxy-7jnwl                           1/1     Running   0          9m31s
+kube-system   kube-scheduler-k8s-master                  1/1     Running   1          8m43s
+```  
 
 ## 4) Installing a dashboard
 https://github.com/kubernetes/dashboard
