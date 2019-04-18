@@ -106,8 +106,7 @@ customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.or
 customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
 customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
-customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
-      
+customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created      
 ```
 
 ## 4) Installing a dashboard
