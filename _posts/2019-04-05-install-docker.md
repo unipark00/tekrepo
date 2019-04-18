@@ -19,7 +19,7 @@ Since v1.14.0, kubeadm will try to automatically detect the container runtime on
 # Install Docker CE
 ## Set up the repository
 ### Install packages to allow apt to use a repository over HTTPS
-apt-get update && apt-get install apt-transport-https ca-certificates \
+sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates \
     curl gnupg-agent software-properties-common
 
 ### Add Docker’s official GPG key
