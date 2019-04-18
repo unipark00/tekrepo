@@ -89,16 +89,12 @@ kubectl describe nodes k8s-master
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 ```
-3. Install a pod network add-on (Calico)  
-Install Calico with the following command.  
+3. Install Calico with the following command.  
 ```console
-kubectl apply -f \
+$ kubectl apply -f \
     https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
-```  
-You should see the following output.  
-```console
-
 ```
+
 ## Installing a dashboard
 https://github.com/kubernetes/dashboard
 * Getting Started
