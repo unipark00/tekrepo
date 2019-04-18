@@ -80,7 +80,8 @@ kubectl get nodes
 kubectl get pods --all-namespaces
 kubectl get pods -n kube-system
 kubectl describe nodes k8s-master
-```
+```  
+
 ### Calico
 ![calico](https://github.com/unipark00/tekrepo/blob/master/_posts/20190418_182218.png?raw=true)
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
@@ -95,7 +96,7 @@ $ kubectl apply -f \
     https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
 ```
 
-## Installing a dashboard
+## 4) Installing a dashboard
 https://github.com/kubernetes/dashboard
 * Getting Started
 ```console
