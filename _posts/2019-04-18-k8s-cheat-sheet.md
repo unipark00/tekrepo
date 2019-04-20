@@ -23,4 +23,8 @@ kubectl get no
 kubectl get no -o=wide
 kubectl get no -o=json // JSON format
 ```
-### 2) 
+#### Pods
+```console
+kubectl get pods --all-namespaces
+```
+### 2)
