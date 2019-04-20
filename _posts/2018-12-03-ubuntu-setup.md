@@ -41,6 +41,10 @@ A. Create NatNetwork
 ![NatNetwork1](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_105355.png?raw=true)  
 ![NatNetwork2](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_105409.png?raw=true)
 
+Note) Case of Calico network, 172.16.0.0/24 is preferrable.
+[k8s-calico-over-virtualbox-ubuntu-16](
+https://blog.encicle.com/2-kubernetes-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-kubernetes-calico-over-virtualbox-ubuntu-16/)
+
 B. Ubuntu Server (Worker node)
 ```console
 root@ubuntu:/etc/network$ vi interfaces
