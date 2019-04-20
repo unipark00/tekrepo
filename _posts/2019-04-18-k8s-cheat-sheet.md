@@ -9,6 +9,13 @@ toc: false
 
 This post shows the cheat sheets for quick k8s operation.
 
+### Tips
+#### Auto completion
+```console
+$ source <(kubectl completion bash)
+$ echo "source <(kubectl completion bash)" >> ~/.bashrc
+```
+
 ### 1) Resource Information
 #### Nodes
 ```console
