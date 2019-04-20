@@ -134,6 +134,12 @@ kube-system   kube-scheduler-k8s-master                  1/1     Running   1    
 ```console
 $ kubectl create -f \
         https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
+secret/kubernetes-dashboard-certs created
+serviceaccount/kubernetes-dashboard created
+role.rbac.authorization.k8s.io/kubernetes-dashboard-minimal created
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard-minimal created
+deployment.apps/kubernetes-dashboard created
+service/kubernetes-dashboard created
 ```  
 * Create An Authentication Token (RBAC)
 ```console
