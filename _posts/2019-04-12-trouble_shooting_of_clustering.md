@@ -9,39 +9,39 @@ toc: false
 
 This post shows the trouble shooting of k8s cluster configuration.  
 
-1. swap disabled
+### 1. swap disabled
 ```console
 swapoff -a
 ```
-2. permanent **`swapoff`** after reboot
+### 2. permanent **`swapoff`** after reboot
 ```console
 // based on ubuntu 18.04 LTS
 $ vi /etc/fstab
 #/swapfile // desktop version
 #/swap.img // server version
 ```
-3. kubelet service restart
+### 3. kubelet service restart
 ```console
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 $ sudo journalctl -u kubelet.service | grep "failed to run"
 ```
-4. reset k8s
+### 4. reset k8s
 ```console
 $ kubeadm reset
 ```
-5. log monitoing with **`journalctl`**
+### 5. log monitoing with **`journalctl`**
 ```console
 // today log
 $ journalctl --since=today
 // specific service
 $ journalctl -f -u kubelet.service
 ```
-6. `kswapd0` CPU 100% problem
+### 6. `kswapd0` CPU 100% problem
 ```console
 workaround --> 4GB, 4Core VM
 ```
-7. query or create a token (`kubeadm join`)
+### 7. query or create a token (`kubeadm join`)
 ```console
 // Token
 $ kubeadm token list
