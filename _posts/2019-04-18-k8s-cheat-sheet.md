@@ -9,22 +9,22 @@ toc: false
 
 This post shows the cheat sheets for quick k8s operation.
 
-### Tips
-#### Auto completion
+## Tips
+### Auto completion
 ```console
 $ source <(kubectl completion bash)
 $ echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 
-### 1) Resource Information
-#### Nodes
+## 1) Resource Information
+### Nodes
 ```console
 kubectl get no
 kubectl get no -o=wide
 kubectl get no -o=json // JSON format
 ```
-#### Pods
+### Pods
 ```console
 kubectl get pods --all-namespaces
 ```
-### 2)
+## 2)
