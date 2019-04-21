@@ -32,7 +32,7 @@ $ sudo journalctl -u kubelet.service | grep "failed to run"
 ```console
 $ kubeadm reset
 ```
-1. **permanent** `swapoff` after reboot
+1. permanent `swapoff` after reboot
 ```console
 // based on ubuntu 18.04 LTS
 $ vi /etc/fstab
