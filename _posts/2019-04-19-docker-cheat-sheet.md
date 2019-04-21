@@ -9,7 +9,7 @@ toc: false
 
 This post shows the cheat sheets for quick docker operation.
 
-### 1) docker ps: formatting
+## 1) docker ps: formatting
 ```console
 docker ps -a --format "table {{.ID}}\t{{.Status}}\t{{.Ports}}\t{{.Image}}\t{{.Names}}"
 ```
