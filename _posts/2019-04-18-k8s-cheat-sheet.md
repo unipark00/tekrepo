@@ -15,8 +15,8 @@ This post shows the cheat sheets for quick k8s operation.
 ## Tips
 ### Auto completion
 ```console
-$ source <(kubectl completion bash)
-$ echo "source <(kubectl completion bash)" >> ~/.bashrc
+source <(kubectl completion bash)
+echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 ## Resource Information
 ### Nodes
