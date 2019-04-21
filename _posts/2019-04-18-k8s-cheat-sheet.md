@@ -11,6 +11,7 @@ This post shows the cheat sheets for quick k8s operation.
 
 ## Reference
 * [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+* [kubectl run](https://kubernetes.io/docs/reference/kubectl/conventions/#kubectl-run) : [`--generator` flag](https://kubernetes.io/docs/reference/kubectl/conventions/#generators)
 
 ## Tips
 ### Auto completion
