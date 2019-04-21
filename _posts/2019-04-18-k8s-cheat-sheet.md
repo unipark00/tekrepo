@@ -9,7 +9,8 @@ toc: false
 
 This post shows the cheat sheets for quick k8s operation.
 
-[kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)  
+## Reference
+1) [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)  
 
 ## Tips
 ### Auto completion
