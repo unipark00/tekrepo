@@ -13,35 +13,35 @@ This post shows the trouble shooting of k8s cluster configuration.
 ```console
 swapoff -a
 ```
-1. kubelet service restart  
-```console
-$ systemctl daemon-reload
-$ systemctl restart kubelet
-$ sudo journalctl -u kubelet.service | grep "failed to run"
-```
-1. reset k8s
-```console
-$ kubeadm reset
-```
-1. permanent **`swapoff`** after reboot
+2. permanent **`swapoff`** after reboot
 ```console
 // based on ubuntu 18.04 LTS
 $ vi /etc/fstab
 #/swapfile // desktop version
 #/swap.img // server version
 ```
-1. log monitoing with **`journalctl`**
+3. kubelet service restart
+```console
+$ systemctl daemon-reload
+$ systemctl restart kubelet
+$ sudo journalctl -u kubelet.service | grep "failed to run"
+```
+4. reset k8s
+```console
+$ kubeadm reset
+```
+5. log monitoing with **`journalctl`**
 ```console
 // today log
-$ journalctl --since=today  
+$ journalctl --since=today
 // specific service
 $ journalctl -f -u kubelet.service
 ```
-1. `kswapd0` CPU 100% problem
+6. `kswapd0` CPU 100% problem
 ```console
 workaround --> 4GB, 4Core VM
-```  
-1. query or create a token (`kubeadm join`)
+```
+7. query or create a token (`kubeadm join`)
 ```console
 // Token
 $ kubeadm token list
