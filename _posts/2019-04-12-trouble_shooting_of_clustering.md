@@ -36,8 +36,8 @@ $ kubeadm reset
 ```console
 // based on ubuntu 18.04 LTS
 $ vi /etc/fstab
-# /swapfile // desktop version
-# /swap.img // server version
+#/swapfile // desktop version
+#/swap.img // server version
 ```
 1. log monitoing with **`journalctl`**
 ```console
