@@ -13,7 +13,7 @@ This post shows the trouble shooting of k8s cluster configuration.
 1. swap disabled
 ```console
 $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
-    /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+      /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
@@ -56,8 +56,8 @@ workaround --> 4GB, 4Core VM
 $ kubeadm token list
 // CA cert hash
 $ openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | \
-    openssl rsa -pubin -outform der 2>/dev/null | \
-    openssl dgst -sha256 -hex | sed 's/^.* //'
+        openssl rsa -pubin -outform der 2>/dev/null | \
+        openssl dgst -sha256 -hex | sed 's/^.* //'
 or
 // New command
 $ kubeadm token create --print-join-command
