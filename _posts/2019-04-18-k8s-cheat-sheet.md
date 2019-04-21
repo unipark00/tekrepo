@@ -10,7 +10,7 @@ toc: false
 This post shows the cheat sheets for quick k8s operation.
 
 ## Reference
-### 1) [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)  
+### * [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
 ## Tips
 ### Auto completion
@@ -19,7 +19,7 @@ $ source <(kubectl completion bash)
 $ echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 
-## 1) Resource Information
+## Resource Information
 ### Nodes
 ```console
 kubectl get no
@@ -30,4 +30,3 @@ kubectl get no -o=json // JSON format
 ```console
 kubectl get pods --all-namespaces
 ```
-## 2)
