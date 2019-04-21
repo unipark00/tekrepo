@@ -17,10 +17,8 @@ $ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
 $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
+**`sudo swapoff -a`** is preferrable.
 1. **`kubeadm`** cheat sheet  
-```console
-will be updated ...
-```
 [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 1. kubelet service restart
 ```console
