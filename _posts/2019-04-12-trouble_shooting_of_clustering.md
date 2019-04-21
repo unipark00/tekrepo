@@ -8,19 +8,12 @@ toc: false
 ---
 
 This post shows the trouble shooting of k8s cluster configuration.  
-  
 
 1. swap disabled
 ```console
-$ sed -i '9s/^/Environment="KUBELET_EXTRA_ARGS=--fail-swap-on=false"\n/' \
-      /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-$ systemctl daemon-reload
-$ systemctl restart kubelet
+swapoff -a
 ```
-**`sudo swapoff -a`** is preferrable.  
-1. **`kubeadm`** cheat sheet  
-[kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-1. kubelet service restart
+1. kubelet service restart  
 ```console
 $ systemctl daemon-reload
 $ systemctl restart kubelet
