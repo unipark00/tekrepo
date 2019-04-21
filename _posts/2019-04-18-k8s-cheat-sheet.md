@@ -12,6 +12,12 @@ This post shows the cheat sheets for quick k8s operation.
 ## Reference
 * [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 * [kubectl run](https://kubernetes.io/docs/reference/kubectl/conventions/#kubectl-run) : [`--generator` flag](https://kubernetes.io/docs/reference/kubectl/conventions/#generators)
+|Resources|kubectl command|
+|:--------|:-----Pod---|
+|Pod|kubectl run --generator=run-pod/v1|
+|Replication controller|kubectl run --generator=run/v1|
+|Deployment|kubectl run --generator=extensions/v1beta1|
+|Deployment|kubectl run --generator=apps/v1beta1|
 
 ## Tips
 ### Auto completion
