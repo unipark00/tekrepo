@@ -21,7 +21,7 @@ $ systemctl restart kubelet
 ```console
 will be updated ...
 ```
-https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+[kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 1. kubelet service restart
 ```console
 $ systemctl daemon-reload
