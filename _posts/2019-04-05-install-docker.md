@@ -31,7 +31,8 @@ sudo add-apt-repository \
     $(lsb_release -cs) stable"
 
 ## Install Docker CE
-sudo apt-get update && sudo apt-get install -y docker-ce=18.06.2~ce~3-0~ubuntu
+sudo apt-get update && sudo apt-get install -y docker-ce=18.06.2~ce~3-0~ubuntu // specify version
+sudo apt-get update && sudo apt-get install -y docker-ce
 -----
 # Setup daemon
 sudo su
