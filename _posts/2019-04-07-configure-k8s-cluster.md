@@ -9,7 +9,7 @@ toc: false
 
 This post shows the creation of a single master cluster with kubeadm.  
 
-# Overview
+## Overview
 * Kubernetes 설치 후, **`Master Node`** 초기화
 * Master 노드를 초기화 할 때, 사용할 **`Pod Network`** 에 따라 초기화 코드가 달라짐
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
