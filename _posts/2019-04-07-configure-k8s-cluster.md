@@ -37,7 +37,6 @@ Then you can join any number of worker nodes by running the following on each as
 kubeadm join 172.31.0.10:6443 --token p2mqor.d82ocr3m8hskme74 \
     --discovery-token-ca-cert-hash sha256:5355577027f9621a4c41db14d5e3dd1fb4ff75fd27f764454b1f4c31795e8040
 ```
-
 ## 1) Installing kubeadm on your hosts
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 [https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
