@@ -18,12 +18,17 @@ This post is about exposing your app publicly.
 |:--------|:--------------|
 |Pod|**`kubectl run --generator=run-pod/v1`**|
 |Replication controller|**`kubectl run --generator=run/v1`**|
-|Deployment|**`kubectl run --generator=extensions/v1beta1`**|
-|Deployment|**`kubectl run --generator=apps/v1beta1`**|
+|Deployment|**`kubectl run --generator=deployment/v1beta1`**|
+|Deployment|**`kubectl run --generator=deployment/apps.v1beta1`**|
 
 ```console
-$ kubectl run hello-world --replicas=5 --labels="run=load-balancer-example" --image=gcr.io/google-samples/node-hello:1.0 --port=8080
-kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead
+$ kubectl run hello-world \
+        --replicas=5 \
+        --labels="run=load-balancer-example" \
+        --image=gcr.io/google-samples/node-hello:1.0 \
+        --port=8080
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version.
+Use kubectl run --generator=run-pod/v1 or kubectl create instead
 ```
 instead,
 ```console
@@ -33,6 +38,8 @@ $ kubectl run hello-world \
         --labels="run=load-balancer-example" \
         --image=gcr.io/google-samples/node-hello:1.0 \
         --port=8080
+kubectl run --generator=extensions/v1beta1 is DEPRECATED and will be removed in a future version. 
+Use kubectl run --generator=run-pod/v1 or kubectl create instead.
 ```
 ## Tips
 ### Auto completion
