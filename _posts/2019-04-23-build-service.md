@@ -38,7 +38,7 @@ $ kubectl run hello-world \
         --labels="run=load-balancer-example" \
         --image=gcr.io/google-samples/node-hello:1.0 \
         --port=8080
-kubectl run --generator=extensions/v1beta1 is DEPRECATED and will be removed in a future version. 
+kubectl run --generator=deployment/v1beta1 is DEPRECATED and will be removed in a future version. 
 Use kubectl run --generator=run-pod/v1 or kubectl create instead.
 ```
 ## Tips
