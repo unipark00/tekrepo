@@ -19,5 +19,6 @@ This post shows the overview of docker networking.
 * Container 각각은 Linux namespace를 이용해 독립된 network 영역을 할당
 * 각 Container는 의도한 Port만 노출(Expose)해서 통신
 ```console
-@
+$ brctl show
+
 ```
