@@ -31,6 +31,10 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
 ```
 * Step 3: join worker node(s)
+```console
+Then you can join any number of worker nodes by running the following on each as root:
+kubeadm join 172.31.0.10:6443 --token p2mqor.d82ocr3m8hskme74
+```
 
 ## 1) Installing kubeadm on your hosts
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
