@@ -10,7 +10,7 @@ toc: false
 This post shows the overview of docker networking.
 
 ### docker0
-![docker networking](
+![docker networking](https://github.com/unipark00/tekrepo/blob/master/_posts/2750F23D55A37EF801.png?raw=true)
 * Linux Bridge (L2)
 * IP Pool 내에서 Private IP 자동 할당
 * 동일 호스트에 생성되는 모든 Container들은 같은 `docker0`에 바인딩
