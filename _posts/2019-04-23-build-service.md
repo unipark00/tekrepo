@@ -33,7 +33,7 @@ Use kubectl run --generator=run-pod/v1 or kubectl create instead
 instead,
 ```console
 $ kubectl run hello-world \
-        --generator=extensions/v1beta1 \
+        --generator=deployment/v1beta1 \
         --replicas=5 \
         --labels="run=load-balancer-example" \
         --image=gcr.io/google-samples/node-hello:1.0 \
