@@ -19,21 +19,21 @@ This post shows the creation of a single master cluster with kubeadm.
 * Step 1: configure configuration for kubectl
 ```console
 To start using your cluster, you need to run the following as a regular user:
-
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+    mkdir -p $HOME/.kube
+    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 * Step 2: deploy a pod network
 ```console
 You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
-  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+    https://kubernetes.io/docs/concepts/cluster-administration/addons/
 ```
 * Step 3: join worker node(s)
 ```console
 Then you can join any number of worker nodes by running the following on each as root:
-kubeadm join 172.31.0.10:6443 --token p2mqor.d82ocr3m8hskme74
+    kubeadm join 172.31.0.10:6443 --token p2mqor.d82ocr3m8hskme74 \
+    --discovery-token-ca-cert-hash sha256:5355577027f9621a4c41db14d5e3dd1fb4ff75fd27f764454b1f4c31795e8040
 ```
 
 ## 1) Installing kubeadm on your hosts
