@@ -15,6 +15,29 @@ This post shows the creation of a single master cluster with kubeadm.
 * 종류 별로 Pod Network 사용 방법 및 초기화 코드 확인  
   [https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-netspanwork)  
 
+## Key Summary (After `kubeadm init`) - 순서 헷갈리지 말자~
+* Step 1: configure configuration for kubectl
+```console
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+* Step 2: deploy a pod network
+```console
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+```
+* Step 3: join worker node(s)
+```console
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 172.31.0.10:6443 --token p2mqor.d82ocr3m8hskme74 \
+    --discovery-token-ca-cert-hash sha256:5355577027f9621a4c41db14d5e3dd1fb4ff75fd27f764454b1f4c31795e8040
+```
+
 ## 1) Installing kubeadm on your hosts
 **`kubeadm`** helps you bootstrap a minimum viable Kubernetes cluster that conforms to best practices.
 [https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/](https://unipark00.github.io/tekrepo/kubernetes/install-kubeadm/)
@@ -37,6 +60,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 sudo swapoff -a // 이것 때문에 엄청 삽질을~~!!!
 ```
+
 ## 3) Installing a pod network add-on
 * You must install a pod network add-on so that your pods can communicate with each other. ([add-on pages](https://kubernetes.io/docs/concepts/cluster-administration/addons/))  
 * The network must be deployed before any applications. CoreDNS will not start up before a network is installed.  
@@ -49,6 +73,7 @@ You can install a pod network add-on with the following command:
 ```console
 kubectl apply -f <add-on.yaml>
 ```  
+
 ### Flannel
 ![flannel](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_132750.png?raw=true)  
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
@@ -155,7 +180,7 @@ kubectl get secret $(kubectl get serviceaccount cluster-admin-dashboard-sa \
         -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 ```
 
-# Miscellaneous
+## Miscellaneous
 * [Network Policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 * [Add-ons](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
 * [What is CNI?](https://github.com/containernetworking/cni#cni---the-container-network-interface)
