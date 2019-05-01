@@ -2,7 +2,7 @@
 title: "Docker Networking"
 search: false
 categories:
-  - Kubernetes
+  - Docker
 last_modified_at: 2019-05-01T21::00+09:00
 toc: false
 ---
