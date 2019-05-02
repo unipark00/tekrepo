@@ -2,7 +2,7 @@
 title: "Docker image"
 search: false
 categories:
-  - Ubuntu
+  - Docker
 last_modified_at: 2019-05-03T10:00+09:00
 toc: false
 ---
