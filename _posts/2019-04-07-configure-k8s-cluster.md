@@ -73,6 +73,7 @@ kubectl apply -f <add-on.yaml>
 ```  
 
 ### Flannel
+[Flannel: Getting started on Kubernetes](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network)
 ![flannel](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_132750.png?raw=true)  
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 2. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
