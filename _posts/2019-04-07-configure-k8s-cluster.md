@@ -73,7 +73,7 @@ kubectl apply -f <add-on.yaml>
 ```  
 
 ### Flannel
-#### [Getting started on Kubernetes](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network)
+[Getting started on Kubernetes](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network)
 ![flannel](https://github.com/unipark00/tekrepo/blob/master/_posts/20190411_132750.png?raw=true)  
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 2. Pass **`--pod-network-cidr=10.244.0.0/16`** to **`kubeadm init`**  
@@ -102,7 +102,7 @@ watch kubectl get pods --all-namespaces
 ```  
 
 ### Calico
-#### [Quickstart for Calico on Kubernetes](https://docs.projectcalico.org/v3.6/getting-started/kubernetes/)
+[Quickstart for Calico on Kubernetes](https://docs.projectcalico.org/v3.6/getting-started/kubernetes/)
 ![calico](https://github.com/unipark00/tekrepo/blob/master/_posts/20190418_182218.png?raw=true)
 1. Set **`/proc/sys/net/bridge/bridge-nf-call-iptables`** to **`1`**  
 2. Pass **`--pod-network-cidr=192.168.0.0/16`** to **`kubeadm init`**  
