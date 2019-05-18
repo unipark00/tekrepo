@@ -22,3 +22,4 @@ kubelet/kubernetes-xenial,now 1.14.1-00 amd64 [installed,upgradable to: 1.14.2-0
 ### remove installed packages
 ```console
 $ sudo apt remove [package_name]
+```
